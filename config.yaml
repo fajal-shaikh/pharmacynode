@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pharmacy-config
+data:
+  .env: |
+    MYSQL_HOST=my-mysql-service
+    MYSQL_DATABASE=pharmacy
+    MYSQL_USERNAME=root
+    MYSQL_ROOT_PASSWORD=Akbar@786

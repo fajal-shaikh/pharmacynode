@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pharmacy-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pharmacy
+  template:
+    metadata:
+      labels:
+        app: pharmacy
+    spec:
+      containers:
+      - name: pharmacy
+        image: akbaralidevops/pharmacy1:latest
+        ports:
+        - containerPort: 7000
+        envFrom:
+        - configMapRef:
+            name: pharmacy-config
