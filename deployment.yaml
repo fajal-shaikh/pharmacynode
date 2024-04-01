@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: pharmacy
-        image: akbaralidevops/pharmacynode-app:latest100
+        image: akbaralidevops/pharmacynode-app:latest200
         ports:
         - containerPort: 7000
         envFrom:
