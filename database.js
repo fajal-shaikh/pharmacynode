@@ -1,9 +1,9 @@
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "65.0.86.221",
+  host: "192.168.180.230",
   user: "root",
-  password: "Akbar@786",
+  password: "Root@123",
   database: 'pharmacy',
   port: 3306, // Specify the port number here (default is 3306 for MySQL)
   connectionLimit: 10, // Adjust the connection pool size as needed
