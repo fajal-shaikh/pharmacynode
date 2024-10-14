@@ -37,9 +37,9 @@ app.use(express.static('./public'));
 // typeahead
 
 var connection = mysql.createConnection({
-  host: "65.0.86.221",
+  host: "192.168.180.230",
     user: "root",
-    password: "Akbar@786",
+    password: "Root@123",
     database: 'pharmacy'
 });
 
@@ -152,9 +152,9 @@ app.get('/admin', function (req, res) {
   // *****************************************************
 
   var connection = mysql.createConnection({
-    host: '65.0.86.221',
+    host: '192.168.180.230',
     user: 'root',
-    password: 'Akbar@786',
+    password: 'Root@123',
     database: 'pharmacy'
 });
 
