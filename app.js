@@ -37,7 +37,7 @@ app.use(express.static('./public'));
 // typeahead
 
 var connection = mysql.createConnection({
-  host: "192.168.180.240",
+  host: "34.236.245.253",
     user: "root",
     password: "Root@123",
     database: 'pharmacy'
