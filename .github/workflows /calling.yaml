@@ -16,5 +16,7 @@ jobs:
   call-shared-pipeline:
     uses: fajal-shaikh/GitAction-Pipeline/.github/workflows/common-pipeline.yml@main
     with:
-      environment: ${{ github.event.inputs.Technology }}
-      secrets: ${{ secrets.TOKEN_GITHUB }}
+      Technology: ${{ github.event.inputs.Technology }}
+    secrets: inherit
+      # The GITHUB_TOKEN secret is automatically passed, but if you have custom secrets, map them like this:
+      # SOME_SECRET: ${{ secrets.SOME_SECRET }}
