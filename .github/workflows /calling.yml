@@ -1,0 +1,20 @@
+name: Manual Trigger for Shared Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      Technology:
+        description: "Select technology to deploy"
+        required: true
+        type: choice
+        options:
+          - java
+          - python
+          - nodejs
+
+jobs:
+  call-shared-pipeline:
+    uses: org/shared-pipelines/.github/workflows/build_deploy.yml@main
+    with:
+      environment: ${{ github.event.inputs.Technology }}
+    secrets: inherit
