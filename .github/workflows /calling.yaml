@@ -14,8 +14,7 @@ on:
 
 jobs:
   call-shared-pipeline:
-    uses: ./GitAction-Pipeline/.github/workflows/common-pipeline.yml@main
+    uses: fajal-shaikh/GitAction-Pipeline/.github/workflows/common-pipeline.yml@main
     with:
       environment: ${{ github.event.inputs.Technology }}
-    secrets: 
-      GITHUB_TOKEN:: ${{ secrets.TOKEN_GITHUB }}
+      secrets: ${{ secrets.TOKEN_GITHUB }}
