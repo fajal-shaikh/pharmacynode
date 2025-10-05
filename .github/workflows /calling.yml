@@ -17,4 +17,5 @@ jobs:
     uses: ./GitAction-Pipeline/.github/workflows/common-pipeline.yml@main
     with:
       environment: ${{ github.event.inputs.Technology }}
-    secrets: inherit
+    secrets: 
+      GITHUB_TOKEN:: ${{ secrets.TOKEN_GITHUB }}
